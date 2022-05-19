@@ -9,3 +9,4 @@ func _on_Timer_timeout():
 
 func exit():
 	parent._return_position()
+	print(parent.move)

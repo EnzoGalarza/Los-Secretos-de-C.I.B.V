@@ -7,14 +7,18 @@ export (float) var FRICTION_WEIGHT:float = 25.1
 export (int) var gravity = 10
 
 onready var state_machine = $StateMachine
+onready var start_position = global_position
+
 
 var velocity : Vector2 = Vector2.ZERO
 var movement : Vector2 = Vector2.ZERO
+var papel = 0
 
 func _ready():
 	state_machine.set_parent(self)
 
 func _apply_movement():
+# warning-ignore:return_value_discarded
 	move_and_collide(velocity)
 		
 func _handle_deacceleration():
@@ -29,4 +33,13 @@ func _handle_move_input(delta = 1):
 	if movement != Vector2.ZERO:
 		velocity += movement * ACCELERATION * delta
 		velocity = velocity.clamped(SPEED_LIMIT * delta)
+
+func notify_hit():
+	global_position = start_position
 	
+func taked():
+		papel += 1
+		if papel == 1:
+			print ("agarraste 1 papel")
+		else:
+			print (str("agarraste ", papel," papeles"))

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/security.png" type="Texture" id=1]
 [ext_resource path="res://entities/enemies/Security.gd" type="Script" id=2]
@@ -15,9 +15,14 @@ height = 30.0
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 93.0
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 15.5, 31.5 )
+
 [node name="Security" type="KinematicBody2D"]
 script = ExtResource( 2 )
-patrol_type = "loop"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 7 )
@@ -35,9 +40,6 @@ script = ExtResource( 4 )
 [node name="Body" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
-
 [node name="DetectionArea" parent="." instance=ExtResource( 6 )]
 
 [node name="CollisionShape2D" parent="DetectionArea" index="0"]
@@ -45,6 +47,14 @@ self_modulate = Color( 1, 1, 1, 0.345098 )
 position = Vector2( 107, -4 )
 shape = SubResource( 2 )
 
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -0.5, 0.5 )
+shape = SubResource( 3 )
+
 [connection signal="timeout" from="DetectionArea/Timer" to="StateMachine/Chasing" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
 
 [editable path="DetectionArea"]
