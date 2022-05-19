@@ -66,7 +66,7 @@ position = Vector2( 783, 171 )
 gravity = 0
 
 [node name="StaticBody2D" parent="Environment" instance=ExtResource( 3 )]
-position = Vector2( 543, 414 )
+position = Vector2( 878, 361 )
 collision_layer = 3
 collision_mask = 2
 
@@ -82,7 +82,7 @@ position = Vector2( 555, 241 )
 script = SubResource( 3 )
 
 [node name="Papel3" parent="Environment" instance=ExtResource( 8 )]
-position = Vector2( 842, 277 )
+position = Vector2( 330, 432 )
 script = SubResource( 3 )
 
 [node name="TileMap" type="TileMap" parent="Environment"]
