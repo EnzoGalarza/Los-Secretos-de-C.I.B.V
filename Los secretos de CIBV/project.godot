@@ -24,6 +24,10 @@ config/name="Los secretos de CIBV"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Controller="*res://Controller.gd"
+
 [input]
 
 move_left={

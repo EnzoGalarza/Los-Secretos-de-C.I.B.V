@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/puerta.png-2b7c42417f5ac8d76d444fd296e94644.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/rosa.png"
+source_file="res://assets/puerta.png"
+dest_files=[ "res://.import/puerta.png-2b7c42417f5ac8d76d444fd296e94644.stex" ]
+
 [params]
 
 compress/mode=0
