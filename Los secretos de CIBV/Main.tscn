@@ -33,7 +33,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
 [sub_resource type="Curve2D" id=3]
 _data = {
-"points": PoolVector2Array( 176.8, 2.99661, -176.8, -2.99661, 699, -209, 37.4913, -128.715, -37.4913, 128.715, 492, 128, 0, 0, 0, 0, 1256, 360, 41.9526, 89.8984, -41.9526, -89.8984, 1373, -101, 0, 0, 0, 0, 705, -212, 0, 0, 0, 0, 699, -209 )
+"points": PoolVector2Array( 176.8, 2.99661, -176.8, -2.99661, 699, -209, 37.4913, -128.715, -37.4913, 128.715, 492, 128, 0, 0, 0, 0, 1256, 360, 41.9526, 89.8984, -41.9526, -89.8984, 1361.07, -100.932, 0, 0, 0, 0, 705, -212, 0, 0, 0, 0, 699, -209 )
 }
 
 [node name="Main" type="Node"]
@@ -50,12 +50,13 @@ position = Vector2( 783, 171 )
 gravity = 0
 
 [node name="Path2D" type="Path2D" parent="Environment"]
-position = Vector2( 0, -1 )
+position = Vector2( 807.269, 207.699 )
+scale = Vector2( 0.590917, 0.72028 )
 curve = SubResource( 3 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Environment/Path2D"]
 position = Vector2( 699, -209 )
-rotation = -3.137
+rotation = -3.13409
 
 [node name="Security" parent="Environment/Path2D/PathFollow2D" instance=ExtResource( 2 )]
 
