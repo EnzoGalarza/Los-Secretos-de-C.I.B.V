@@ -57,6 +57,10 @@ script = ExtResource( 6 )
 
 [node name="Environment" type="Node" parent="."]
 
+[node name="NPC" parent="Environment" instance=ExtResource( 5 )]
+position = Vector2( 376, 130 )
+scale = Vector2( 0.8, 1 )
+
 [node name="Player" parent="Environment" instance=ExtResource( 1 )]
 position = Vector2( 783, 171 )
 gravity = 0
@@ -68,10 +72,6 @@ collision_mask = 2
 
 [node name="Security" parent="Environment" instance=ExtResource( 2 )]
 position = Vector2( 1528, 396 )
-
-[node name="NPC" parent="Environment" instance=ExtResource( 5 )]
-position = Vector2( 551, 78 )
-scale = Vector2( 0.8, 1 )
 
 [node name="Papel" parent="Environment" instance=ExtResource( 8 )]
 position = Vector2( 925, 107 )
