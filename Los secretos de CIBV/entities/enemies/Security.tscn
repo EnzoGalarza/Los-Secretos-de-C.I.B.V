@@ -17,9 +17,11 @@ radius = 93.0
 
 [node name="Security" type="KinematicBody2D"]
 script = ExtResource( 2 )
+patrol_type = "loop"
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 7 )
+START_STATE = NodePath("Walk")
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 5 )
