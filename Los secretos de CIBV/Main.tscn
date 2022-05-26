@@ -82,7 +82,7 @@ curve = SubResource( 4 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Environment/Path2D"]
 position = Vector2( 779.688, -160.631 )
-rotation = 0.881811
+rotation = 0.881818
 
 [node name="Security" parent="Environment/Path2D/PathFollow2D" instance=ExtResource( 2 )]
 position = Vector2( 1.08386, -1.29955 )
