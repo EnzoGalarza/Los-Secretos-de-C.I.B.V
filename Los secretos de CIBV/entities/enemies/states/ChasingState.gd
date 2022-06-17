@@ -7,6 +7,3 @@ func update(delta):
 func _on_Timer_timeout():
 	emit_signal("finished","walk")
 
-func exit():
-	parent._return_position()
-	print(parent.move)
