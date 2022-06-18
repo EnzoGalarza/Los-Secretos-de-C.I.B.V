@@ -22,7 +22,7 @@ func _apply_movement():
 	move_and_collide(velocity)
 		
 func _handle_deacceleration():
-	velocity = velocity.slerp(movement,0.5)
+	velocity = velocity.linear_interpolate(movement,0.5)
 	
 func _handle_move_input(delta = 1):
 	var h_movement : int = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
