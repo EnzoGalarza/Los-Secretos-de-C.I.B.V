@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/security.png" type="Texture" id=1]
 [ext_resource path="res://entities/enemies/Security.gd" type="Script" id=2]
 [ext_resource path="res://entities/enemies/states/WalkState.gd" type="Script" id=3]
-[ext_resource path="res://entities/enemies/states/ChasingState.gd" type="Script" id=4]
 [ext_resource path="res://entities/enemies/states/IdleState.gd" type="Script" id=5]
 [ext_resource path="res://entities/enemies/DetectionArea.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/enemies/StateMachine.gd" type="Script" id=7]
@@ -34,9 +33,6 @@ script = ExtResource( 5 )
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource( 3 )
 
-[node name="Chasing" type="Node" parent="StateMachine"]
-script = ExtResource( 4 )
-
 [node name="Body" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 
@@ -54,7 +50,6 @@ modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -0.5, 0.5 )
 shape = SubResource( 3 )
 
-[connection signal="timeout" from="DetectionArea/Timer" to="StateMachine/Chasing" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
 
 [editable path="DetectionArea"]
