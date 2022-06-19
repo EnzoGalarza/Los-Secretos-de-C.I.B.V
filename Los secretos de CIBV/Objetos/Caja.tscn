@@ -4,33 +4,30 @@
 [ext_resource path="res://assets/Objetos/Caja.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 29.9373, 29.6879 )
+extents = Vector2( 51.4687, 48.8439 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 35.125, 30.875 )
+extents = Vector2( 62.0625, 57.4375 )
 
 [node name="Caja" type="StaticBody2D"]
 script = ExtResource( 1 )
-grid_cell_size = Vector2( 32, 32 )
+grid_cell_size = Vector2( 38, 38 )
 
 [node name="Tween" type="Tween" parent="."]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1.68774, 2.68771 )
-scale = Vector2( 0.102513, 0.102513 )
+scale = Vector2( 0.165409, 0.165409 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.937347, 1.68785 )
+position = Vector2( 1, 0 )
 shape = SubResource( 4 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 2, 2 )
 shape = SubResource( 5 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 1.37469, 2.3757 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -19,7 +19,7 @@ func _on_Area2D_body_entered(body: Node) -> void:
 		raycast.force_raycast_update()
 		if !raycast.is_colliding():
 			var final_pos: Vector2 = position + final_direction * grid_cell_size
-			tween.interpolate_property(self, "position", position, final_pos, 1.0, Tween.TRANS_SINE)
+			tween.interpolate_property(self, "position", position, final_pos, 1.5, Tween.TRANS_SINE)
 			tween.start()
 		else:
-			print("No me puedo  mover!")
+			print("No me puedo mover!")
