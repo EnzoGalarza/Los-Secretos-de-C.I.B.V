@@ -44,7 +44,7 @@ position = Vector2( 223, 195 )
 scale = Vector2( 0.8, 1 )
 
 [node name="Player" parent="Environment" instance=ExtResource( 1 )]
-position = Vector2( 1336, -232 )
+position = Vector2( 1192, -344 )
 gravity = 0
 
 [node name="Papel" parent="Environment" instance=ExtResource( 8 )]
@@ -113,10 +113,25 @@ __meta__ = {
 }
 
 [node name="Caja" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1496, -236 )
+position = Vector2( 1586, -336 )
+
+[node name="Caja4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1488, -336 )
+
+[node name="Caja5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1288, -232 )
+
+[node name="Caja6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1496, -448 )
+
+[node name="Caja7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1680, -224 )
+
+[node name="Caja8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1192, -232 )
 
 [node name="Caja3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 744, 264 )
+position = Vector2( 736, 280 )
 
 [node name="Caja2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1496, -324 )
+position = Vector2( 1392, -336 )
