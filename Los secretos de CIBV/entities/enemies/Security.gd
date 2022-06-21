@@ -42,6 +42,7 @@ func _patrol(delta):
 func set_path():
 	path = nav.get_simple_path(get_position(),objetivos[index],false)
 
+
 func set_target_path(target_pos):
 	target_path = nav.get_simple_path(get_position(),target_pos,false)
 	
@@ -53,6 +54,7 @@ func _idle(delta):
 
 func _see_player():
 	return detection_area.can_see_player()
+
 
 func _on_Hitbox_body_entered(body):
 	if body.has_method("notify_hit"):
