@@ -1,11 +1,14 @@
 extends Area2D
 
+onready var item_name = "papel"
+
 func delete():
-	get_node("sprite").hide()
+	get_node("Sprite").hide()
 	queue_free()
 
 
 func _on_Papel_body_entered(body):
 	if body.has_method("taked"):
+		body.taked(item_name,get_node("Sprite"))
 		delete()
-		body.taked()
+		

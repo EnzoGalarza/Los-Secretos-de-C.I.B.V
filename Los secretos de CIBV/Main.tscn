@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/enemies/Security.tscn" type="PackedScene" id=2]
@@ -8,20 +8,6 @@
 [ext_resource path="res://entities/world/Puerta.tscn" type="PackedScene" id=7]
 [ext_resource path="res://entities/objects/Papel.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/dialogo/164e28641ddb23dc53050a3b9c96f986-burbuja-de-nube-gris.png" type="Texture" id=9]
-
-[sub_resource type="GDScript" id=3]
-script/source = "extends Area2D
-
-func delete():
-	get_node(\"Sprite\").hide()
-	queue_free()
-
-
-func _on_Papel_body_entered(body):
-	if body.has_method(\"taked\"):
-		delete()
-		body.taked()
-"
 
 [node name="Main" type="Node"]
 
@@ -38,25 +24,22 @@ script = ExtResource( 6 )
 
 [node name="Environment" type="Node" parent="."]
 
-[node name="NPC" parent="Environment" instance=ExtResource( 5 )]
-position = Vector2( 223, 195 )
-scale = Vector2( 0.8, 1 )
-
 [node name="Player" parent="Environment" instance=ExtResource( 1 )]
 position = Vector2( 783, 171 )
 gravity = 0
 
+[node name="NPC" parent="Environment" instance=ExtResource( 5 )]
+position = Vector2( 223, 195 )
+scale = Vector2( 0.8, 1 )
+
 [node name="Papel" parent="Environment" instance=ExtResource( 8 )]
 position = Vector2( 925, 107 )
-script = SubResource( 3 )
 
 [node name="Papel2" parent="Environment" instance=ExtResource( 8 )]
 position = Vector2( 555, 241 )
-script = SubResource( 3 )
 
 [node name="Papel3" parent="Environment" instance=ExtResource( 8 )]
 position = Vector2( 330, 432 )
-script = SubResource( 3 )
 
 [node name="Security" type="Node" parent="Environment"]
 
