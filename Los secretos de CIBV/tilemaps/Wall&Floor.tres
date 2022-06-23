@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=130 format=2]
+[gd_resource type="TileSet" load_steps=131 format=2]
 
 [ext_resource path="res://assets/floor.png" type="Texture" id=1]
 [ext_resource path="res://assets/brown_square.png" type="Texture" id=2]
@@ -12,6 +12,10 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64, 0, 0 )
 vertices = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -32, -32, -32, 32, 32, 32, 32, -32 ) ]
+
+[sub_resource type="NavigationPolygon" id=127]
+vertices = PoolVector2Array( 32, 32, 96, 32, 96, 96, 32, 96 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -427,6 +431,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
+2/navigation = SubResource( 127 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 2/shape_one_way = false

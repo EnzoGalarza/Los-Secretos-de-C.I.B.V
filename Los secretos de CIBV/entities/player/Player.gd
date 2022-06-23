@@ -8,8 +8,8 @@ export (int) var gravity = 10
 
 onready var state_machine = $StateMachine
 onready var start_position = global_position
-onready var inventory = $ItemList
-
+onready var inventory : ItemList = $ItemList
+onready var animation_player : AnimationPlayer = $AnimationPlayer
 
 var velocity : Vector2 = Vector2.ZERO
 var movement : Vector2 = Vector2.ZERO
@@ -33,11 +33,24 @@ func _handle_move_input(delta = 1):
 	var h_movement : int = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
 	var v_movement : int = int(Input.is_action_pressed("move_down")) - int(Input.is_action_pressed("move_up"))
 	
+	if h_movement > 0:
+		_play_animation("caminar derecha")
+	if h_movement < 0:
+		_play_animation("Caminar izquierda")
+	if v_movement > 0:
+		_play_animation("Caminar Abajo")
+	if v_movement < 0:
+		_play_animation("Caminar arriba")		
+	
 	movement = Vector2(h_movement,v_movement)
 	
 	if movement != Vector2.ZERO:
 		velocity += movement * ACCELERATION * delta
 		velocity = velocity.clamped(SPEED_LIMIT * delta)
+
+func _play_animation(animation):
+	if animation_player.has_animation(animation):
+		animation_player.play(animation)
 
 func notify_hit():
 	global_position = start_position
