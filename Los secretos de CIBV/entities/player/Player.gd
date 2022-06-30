@@ -8,6 +8,7 @@ export (int) var gravity = 10
 
 onready var state_machine = $StateMachine
 onready var start_position = global_position
+onready var inventory = $ItemList
 
 
 var velocity : Vector2 = Vector2.ZERO
@@ -17,12 +18,16 @@ var papel = 0
 func _ready():
 	state_machine.set_parent(self)
 
+func _input(event):
+	if event.is_action_pressed("inventory"):
+		inventory.visible = !inventory.visible
+
 func _apply_movement():
 # warning-ignore:return_value_discarded
 	move_and_collide(velocity)
 		
 func _handle_deacceleration():
-	velocity = velocity.slerp(movement,0.5)
+	velocity = velocity.linear_interpolate(movement,0.5)
 	
 func _handle_move_input(delta = 1):
 	var h_movement : int = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
@@ -37,9 +42,10 @@ func _handle_move_input(delta = 1):
 func notify_hit():
 	global_position = start_position
 	
-func taked():
-		papel += 1
-		if papel == 1:
-			print ("agarraste 1 papel")
-		else:
-			print (str("agarraste ", papel," papeles"))
+func taked(item_name,item):	
+	inventory.add_item(item_name,item.texture)	
+	papel += 1
+	if papel == 1:
+		print ("agarraste 1 papel")
+	else:
+		print (str("agarraste ", papel," papeles"))

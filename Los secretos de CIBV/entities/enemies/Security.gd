@@ -41,12 +41,7 @@ func _patrol(delta):
 		
 func set_path():
 	path = nav.get_simple_path(get_position(),objetivos[index],false)
-	
-func _chasing(delta):
-	var target = detection_area.player
-	if target != null:
-		var direction = (target.global_position - global_position).normalized()
-		move = move.move_toward(direction * SPEED_LIMIT, ACCELERATION * delta)
+
 
 func set_target_path(target_pos):
 	target_path = nav.get_simple_path(get_position(),target_pos,false)
@@ -60,13 +55,7 @@ func _idle(delta):
 func _see_player():
 	return detection_area.can_see_player()
 
-func _stop_chasing():
-	detection_area.player = null
-	move = Vector2()
-	
-
 
 func _on_Hitbox_body_entered(body):
 	if body.has_method("notify_hit"):
 		body.notify_hit()
-		_stop_chasing()
