@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-export(float) var speed : float = 90.0
+export(float) var speed : float = 150.0
 export (float) var ACCELERATION:float = 300.0
-export (float) var SPEED_LIMIT:float = 100.0
+export (float) var SPEED_LIMIT:float = 150.0
 
 onready var detection_area = $DetectionArea 
 onready var state_machine = $StateMachine
