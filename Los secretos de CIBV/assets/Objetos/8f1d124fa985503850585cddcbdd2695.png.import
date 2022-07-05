@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/con textura blanca.png-c5110f670dfb690dfbf2855004db1c5f.stex"
+path="res://.import/8f1d124fa985503850585cddcbdd2695.png-7df673bcd5e298195afaf605660e6c15.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilemaps/con textura blanca.png"
-dest_files=[ "res://.import/con textura blanca.png-c5110f670dfb690dfbf2855004db1c5f.stex" ]
+source_file="res://assets/Objetos/8f1d124fa985503850585cddcbdd2695.png"
+dest_files=[ "res://.import/8f1d124fa985503850585cddcbdd2695.png-7df673bcd5e298195afaf605660e6c15.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Escritorio.png-97ad479116df32ef10d096885a9a316b.stex"
+path="res://.import/tumblr_nau4jz93r31sjx9ceo2_540.png-42dad74ed5715beaf498c55b401e4990.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objetos/Escritorio.png"
-dest_files=[ "res://.import/Escritorio.png-97ad479116df32ef10d096885a9a316b.stex" ]
+source_file="res://assets/Objetos/tumblr_nau4jz93r31sjx9ceo2_540.png"
+dest_files=[ "res://.import/tumblr_nau4jz93r31sjx9ceo2_540.png-42dad74ed5715beaf498c55b401e4990.stex" ]
 
 [params]
 
