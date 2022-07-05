@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Caja.gd" type="Script" id=1]
+[ext_resource path="res://assets/Objetos/Caja.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 42, 41.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 44.5, 44 )
+
+[node name="Caja" type="StaticBody2D"]
+script = ExtResource( 1 )
+grid_cell_size = Vector2( 16, 16 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1, -1 )
+scale = Vector2( 0.142087, 0.142087 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1, -0.5 )
+shape = SubResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 4294967295
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -1.5, 0 )
+shape = SubResource( 5 )
+one_way_collision_margin = 0.0
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( -41, -42 )
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2( -41, 39 )
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+position = Vector2( 39, 38 )
+
+[node name="RayCast2D4" type="RayCast2D" parent="."]
+position = Vector2( 39, -41 )
+
+[node name="RayCast2D5" type="RayCast2D" parent="."]
+position = Vector2( 42, -3 )
+
+[node name="RayCast2D6" type="RayCast2D" parent="."]
+position = Vector2( -42, -3 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

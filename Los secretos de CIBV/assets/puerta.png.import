@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/security.png-afc597d6db813203ff707774b47d39e1.stex"
+path="res://.import/puerta.png-2b7c42417f5ac8d76d444fd296e94644.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Enemigos/security.png"
-dest_files=[ "res://.import/security.png-afc597d6db813203ff707774b47d39e1.stex" ]
+source_file="res://assets/puerta.png"
+dest_files=[ "res://.import/puerta.png-2b7c42417f5ac8d76d444fd296e94644.stex" ]
 
 [params]
 

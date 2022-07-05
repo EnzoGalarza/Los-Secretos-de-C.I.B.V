@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/interrogacion.png-f79c7b5a0962e2677d817beb8b41bef2.stex"
+path="res://.import/interrogacion.png-1bea94ab02597eb0d92b6d108e8868a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interrogacion.png"
-dest_files=[ "res://.import/interrogacion.png-f79c7b5a0962e2677d817beb8b41bef2.stex" ]
+source_file="res://assets/Interaccion/interrogacion.png"
+dest_files=[ "res://.import/interrogacion.png-1bea94ab02597eb0d92b6d108e8868a6.stex" ]
 
 [params]
 

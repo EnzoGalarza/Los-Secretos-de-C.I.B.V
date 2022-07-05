@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/security.png-afc597d6db813203ff707774b47d39e1.stex"
+path="res://.import/tumblr_nau4jz93r31sjx9ceo2_540.png-2e6773548314d93de692a5866a81b9cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Enemigos/security.png"
-dest_files=[ "res://.import/security.png-afc597d6db813203ff707774b47d39e1.stex" ]
+source_file="res://Objetos/tumblr_nau4jz93r31sjx9ceo2_540.png"
+dest_files=[ "res://.import/tumblr_nau4jz93r31sjx9ceo2_540.png-2e6773548314d93de692a5866a81b9cf.stex" ]
 
 [params]
 

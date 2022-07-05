@@ -82,35 +82,6 @@ position = Vector2( 150, 178 )
 [node name="Planta" parent="Node" instance=ExtResource( 11 )]
 position = Vector2( -1, 556 )
 
-[node name="Cajas" type="Node" parent="."]
-
-[node name="Caja" parent="Cajas" instance=ExtResource( 4 )]
-position = Vector2( 1242, 170 )
-
-[node name="Caja2" parent="Cajas" instance=ExtResource( 4 )]
-position = Vector2( 528, -496 )
-
-[node name="Caja3" parent="Cajas" instance=ExtResource( 4 )]
-position = Vector2( -96, -440 )
-
-[node name="Caja8" parent="Cajas" instance=ExtResource( 4 )]
-position = Vector2( 232, -592 )
-
-[node name="Caja7" parent="Cajas" instance=ExtResource( 4 )]
-position = Vector2( 338, -496 )
-
-[node name="Caja6" parent="Cajas" instance=ExtResource( 4 )]
-position = Vector2( -200, -440 )
-
-[node name="Caja5" parent="Cajas" instance=ExtResource( 4 )]
-position = Vector2( 627, -590 )
-
-[node name="Caja4" parent="Cajas" instance=ExtResource( 4 )]
-position = Vector2( 432, -496 )
-
-[node name="Caja9" parent="Cajas" instance=ExtResource( 4 )]
-position = Vector2( 32, 416 )
-
 [node name="Dialogo" type="Node" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="Dialogo"]
@@ -142,3 +113,34 @@ text = "Holi, ¿todo bien?
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="ObjetosInteractivos" type="Node" parent="."]
+
+[node name="Cajas" type="Node" parent="ObjetosInteractivos"]
+
+[node name="Caja" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
+position = Vector2( 1242, 170 )
+
+[node name="Caja2" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
+position = Vector2( 528, -496 )
+
+[node name="Caja3" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
+position = Vector2( -96, -440 )
+
+[node name="Caja8" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
+position = Vector2( 232, -592 )
+
+[node name="Caja7" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
+position = Vector2( 338, -496 )
+
+[node name="Caja6" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
+position = Vector2( -200, -440 )
+
+[node name="Caja5" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
+position = Vector2( 627, -590 )
+
+[node name="Caja4" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
+position = Vector2( 432, -496 )
+
+[node name="Caja9" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
+position = Vector2( 32, 416 )

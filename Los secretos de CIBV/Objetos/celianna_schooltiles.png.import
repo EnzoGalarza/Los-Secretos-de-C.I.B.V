@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/security.png-afc597d6db813203ff707774b47d39e1.stex"
+path="res://.import/celianna_schooltiles.png-ec2d61515176e3f6a5bbcee9092b3633.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Enemigos/security.png"
-dest_files=[ "res://.import/security.png-afc597d6db813203ff707774b47d39e1.stex" ]
+source_file="res://Objetos/celianna_schooltiles.png"
+dest_files=[ "res://.import/celianna_schooltiles.png-ec2d61515176e3f6a5bbcee9092b3633.stex" ]
 
 [params]
 
