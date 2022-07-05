@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Objetos/0ac73ff50ab0dda254bb9d792e60e26a.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 16.5 )
+
+[node name="Planta" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 6.5 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1, 5 )
+scale = Vector2( 0.747917, 0.845833 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 119, 7, 30, 47 )
