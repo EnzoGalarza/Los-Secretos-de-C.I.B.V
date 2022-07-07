@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/menu/Menu.tres" type="DynamicFont" id=1]
+[ext_resource path="res://ParallaxBackground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Menu.gd" type="Script" id=3]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -136.5
+margin_top = -121.0
+margin_right = 136.5
+margin_bottom = 121.0
+
+[node name="Jugar" type="Button" parent="Buttons"]
+margin_right = 273.0
+margin_bottom = 119.0
+custom_colors/font_color_hover = Color( 0.603922, 0.0901961, 0.0901961, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Jugar"
+flat = true
+
+[node name="Salir" type="Button" parent="Buttons"]
+margin_top = 123.0
+margin_right = 273.0
+margin_bottom = 242.0
+custom_colors/font_color_hover = Color( 0.501961, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Salir"
+flat = true
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 2 )]
+
+[connection signal="pressed" from="Buttons/Jugar" to="." method="_on_Jugar_pressed"]
+[connection signal="pressed" from="Buttons/Salir" to="." method="_on_Salir_pressed"]
