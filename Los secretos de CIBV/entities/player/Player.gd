@@ -7,7 +7,6 @@ export (float) var FRICTION_WEIGHT:float = 25.1
 export (int) var gravity = 10
 
 onready var state_machine = $StateMachine
-onready var start_position = global_position
 onready var inventory : ItemList = $ItemList
 onready var animation_player : AnimationPlayer = $AnimationPlayer
 
@@ -51,9 +50,12 @@ func _handle_move_input(delta = 1):
 func _play_animation(animation):
 	if animation_player.has_animation(animation):
 		animation_player.play(animation)
-
+		
+func _stop_animation():
+	animation_player.stop()
+			
 func notify_hit():
-	global_position = start_position
+	get_tree().reload_current_scene()
 	
 func taked(item_name,item):	
 	inventory.add_item(item_name,item.texture)	

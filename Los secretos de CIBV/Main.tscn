@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/enemies/Security.tscn" type="PackedScene" id=2]
@@ -9,8 +9,11 @@
 [ext_resource path="res://entities/world/Puerta.tscn" type="PackedScene" id=7]
 [ext_resource path="res://entities/objects/Papel.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/dialogo/164e28641ddb23dc53050a3b9c96f986-burbuja-de-nube-gris.png" type="Texture" id=9]
+[ext_resource path="res://Main.gd" type="Script" id=10]
+[ext_resource path="res://entities/world/Checkpoint.tscn" type="PackedScene" id=11]
 
 [node name="Main" type="Node"]
+script = ExtResource( 10 )
 
 [node name="Navigation2D" type="Navigation2D" parent="." groups=["nav"]]
 
@@ -122,3 +125,6 @@ position = Vector2( 736, 280 )
 
 [node name="Caja2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1392, -336 )
+
+[node name="Checkpoint" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1128, -472 )
