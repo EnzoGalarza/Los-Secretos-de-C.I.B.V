@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/enemies/Security.tscn" type="PackedScene" id=2]
@@ -13,9 +13,11 @@
 [ext_resource path="res://Planta.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Recepcionista.gd" type="Script" id=12]
 [ext_resource path="res://assets/dialogo/Caja de dialogo.png" type="Texture" id=13]
+[ext_resource path="res://entities/world/Checkpoint.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Main.gd" type="Script" id=15]
 
 [node name="Main" type="Node"]
-script = ExtResource( 10 )
+script = ExtResource( 15 )
 
 [node name="Navigation2D" type="Navigation2D" parent="." groups=["nav"]]
 
@@ -30,13 +32,6 @@ position = Vector2( 464, 78 )
 script = ExtResource( 6 )
 
 [node name="Environment" type="Node" parent="."]
-
-[node name="NPC" parent="Environment" instance=ExtResource( 5 )]
-position = Vector2( 223, 195 )
-scale = Vector2( 0.8, 1 )
-
-[node name="Caja3" parent="Environment" instance=ExtResource( 4 )]
-position = Vector2( 736, 280 )
 
 [node name="Player" parent="Environment" instance=ExtResource( 1 )]
 position = Vector2( 696, 152 )
@@ -93,8 +88,7 @@ position = Vector2( -1, 556 )
 [node name="Cajas" type="Node" parent="ObjetosInteractivos"]
 
 [node name="Caja" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
-position = Vector2( 1242, 170 )
-
+position = Vector2( -910, -451 )
 
 [node name="Caja2" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
 position = Vector2( 528, -496 )
@@ -120,12 +114,11 @@ position = Vector2( 432, -496 )
 [node name="Caja9" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
 position = Vector2( 32, 416 )
 
+[node name="Caja10" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
+position = Vector2( 1232, 520 )
 
-[node name="Caja2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1760, -440 )
-
-[node name="Checkpoint" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1128, -472 )
+[node name="Planta" parent="." instance=ExtResource( 11 )]
+position = Vector2( 627, 173 )
 
 [node name="NPC" type="Node" parent="."]
 
@@ -156,5 +149,7 @@ margin_right = 112.0
 margin_bottom = 19.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.0392157, 0.027451, 0.027451, 1 )
+color = Color( 0.0235294, 0.0196078, 0.0196078, 1 )
 
+[node name="Checkpoint" parent="." instance=ExtResource( 14 )]
+position = Vector2( 417, -392 )
