@@ -31,6 +31,13 @@ script = ExtResource( 6 )
 
 [node name="Environment" type="Node" parent="."]
 
+[node name="NPC" parent="Environment" instance=ExtResource( 5 )]
+position = Vector2( 223, 195 )
+scale = Vector2( 0.8, 1 )
+
+[node name="Caja3" parent="Environment" instance=ExtResource( 4 )]
+position = Vector2( 736, 280 )
+
 [node name="Player" parent="Environment" instance=ExtResource( 1 )]
 position = Vector2( 696, 152 )
 gravity = 0
@@ -88,6 +95,7 @@ position = Vector2( -1, 556 )
 [node name="Caja" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
 position = Vector2( 1242, 170 )
 
+
 [node name="Caja2" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
 position = Vector2( 528, -496 )
 
@@ -111,6 +119,7 @@ position = Vector2( 432, -496 )
 
 [node name="Caja9" parent="ObjetosInteractivos/Cajas" instance=ExtResource( 4 )]
 position = Vector2( 32, 416 )
+
 
 [node name="Caja2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1760, -440 )
@@ -145,3 +154,7 @@ margin_left = -112.0
 margin_top = -8.0
 margin_right = 112.0
 margin_bottom = 19.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.0392157, 0.027451, 0.027451, 1 )
+
