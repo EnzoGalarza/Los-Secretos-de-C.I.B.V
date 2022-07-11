@@ -32,6 +32,9 @@ script = ExtResource( 6 )
 position = Vector2( 223, 195 )
 scale = Vector2( 0.8, 1 )
 
+[node name="Caja3" parent="Environment" instance=ExtResource( 4 )]
+position = Vector2( 736, 280 )
+
 [node name="Player" parent="Environment" instance=ExtResource( 1 )]
 position = Vector2( 696, 152 )
 gravity = 0
@@ -120,11 +123,11 @@ position = Vector2( 1680, -224 )
 [node name="Caja8" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1192, -232 )
 
-[node name="Caja3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 736, 280 )
-
 [node name="Caja2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1392, -336 )
 
 [node name="Checkpoint" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1128, -472 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.0392157, 0.027451, 0.027451, 1 )
