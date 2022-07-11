@@ -8,7 +8,7 @@
 [ext_resource path="res://entities/world/Puerta.gd" type="Script" id=6]
 [ext_resource path="res://entities/world/Puerta.tscn" type="PackedScene" id=7]
 [ext_resource path="res://entities/objects/Papel.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/dialogo/164e28641ddb23dc53050a3b9c96f986-burbuja-de-nube-gris.png" type="Texture" id=9]
+[ext_resource path="res://assets/npc/image (1).png" type="Texture" id=9]
 [ext_resource path="res://biblioteca1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Planta.tscn" type="PackedScene" id=11]
 
@@ -28,10 +28,6 @@ position = Vector2( 464, 86 )
 script = ExtResource( 6 )
 
 [node name="Environment" type="Node" parent="."]
-
-[node name="NPC" parent="Environment" instance=ExtResource( 5 )]
-position = Vector2( 199, 308 )
-scale = Vector2( 0.8, 1 )
 
 [node name="Player" parent="Environment" instance=ExtResource( 1 )]
 position = Vector2( 696, 152 )
@@ -67,6 +63,17 @@ position = Vector2( 1536, 400 )
 [node name="Position2D4" type="Position2D" parent="Environment/Security/PuntosPatrulla"]
 position = Vector2( 1848, -568 )
 
+[node name="Node" type="Node" parent="Environment"]
+
+[node name="NPC" parent="Environment/Node" instance=ExtResource( 5 )]
+position = Vector2( 209, 298 )
+scale = Vector2( 0.8, 1 )
+
+[node name="Sprite" type="Sprite" parent="Environment/Node"]
+position = Vector2( 211.063, 300.938 )
+scale = Vector2( 0.0620798, 0.0620798 )
+texture = ExtResource( 9 )
+
 [node name="Biblioteca" type="Node" parent="."]
 
 [node name="Biblioteca" parent="Biblioteca" instance=ExtResource( 10 )]
@@ -84,18 +91,6 @@ position = Vector2( 150, 178 )
 position = Vector2( -1, 556 )
 
 [node name="Dialogo" type="Node" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="Dialogo"]
-anchor_left = 0.195
-anchor_top = -0.13
-anchor_right = 0.422
-anchor_bottom = 0.278
-margin_left = -31.68
-margin_top = 158.0
-margin_right = -47.128
-margin_bottom = 136.2
-texture = ExtResource( 9 )
-expand = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Dialogo"]
 anchor_left = 0.323
