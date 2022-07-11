@@ -24,3 +24,5 @@ func _on_AreaEvent_body_entered(body):
 
 func _on_AreaEvent_body_exited(body):
 	active = false
+
+
