@@ -1,6 +1,6 @@
 extends Node
 
-
+onready var body: KinematicBody2D = $NPC
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -12,11 +12,7 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("tecla_e"):
-			var dialog = Dialogic.start('timeline-1')
-			dialog.pause_mode = Node2D.PAUSE_MODE_PROCESS
-			dialog.connect('timeline_end',self,'unpause')
-			add_child(dialog)
-			print("prueba si anda")
+			_dialog('timeline-1')
 			
 			
 func _on_AreaEvent_body_entered(body):
@@ -27,6 +23,17 @@ func _on_AreaEvent_body_entered(body):
 			print("Te dejo pasar, pero es bajo tu propio riesgo...")
 			Controller.abrir_puerta()
 			body.papel = 0
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _dialog(dia):
+	var dialog = Dialogic.start(dia)
+	dialog.pause_mode = Node2D.PAUSE_MODE_PROCESS
+	dialog.connect('timeline_end',self,'unpause')
+	add_child(dialog)
+	print("prueba si anda")
+	get_tree().paused = true
+			
