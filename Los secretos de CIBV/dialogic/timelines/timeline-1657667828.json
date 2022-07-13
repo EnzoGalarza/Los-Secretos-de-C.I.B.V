@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1657667740.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¡Bienvenido al centro Biotecnológico!\nTendrias que agarrar la lampara para poder continuar."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1657667828.json",
+		"name": "timeline-1"
+	}
+}

@@ -20,6 +20,9 @@ func _ready():
 	state_machine.set_parent(self)
 
 func _input(event):
+	if event.is_action_pressed("tecla_e"):
+		print("hola")
+	
 	if event.is_action_pressed("inventory"):
 		inventory.visible = !inventory.visible
 
