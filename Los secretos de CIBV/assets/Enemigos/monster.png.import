@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tilesheet_complete.png-81df85d2b53788b1c3b9936aedfef692.stex"
+path="res://.import/monster.png-faec19e6faf7bb7a48e1589c6f58f8c5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TileMap/tilesheet_complete.png"
-dest_files=[ "res://.import/tilesheet_complete.png-81df85d2b53788b1c3b9936aedfef692.stex" ]
+source_file="res://assets/Enemigos/monster.png"
+dest_files=[ "res://.import/monster.png-faec19e6faf7bb7a48e1589c6f58f8c5.stex" ]
 
 [params]
 

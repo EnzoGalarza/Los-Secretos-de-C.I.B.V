@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/monster-sfx.mp3-ccb7e2c7df411392f1585b570cdb1371.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/sfx/monster-sfx.mp3"
+dest_files=[ "res://.import/monster-sfx.mp3-ccb7e2c7df411392f1585b570cdb1371.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

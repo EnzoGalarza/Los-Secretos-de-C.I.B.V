@@ -5,6 +5,7 @@ var player = null
 func _on_DetectionArea_body_entered(body):
 	if body is Player:
 		player = body
+		get_parent().fire_audio()
 		$Timer.start(2)
 
 func _on_DetectionArea_body_exited(body):
