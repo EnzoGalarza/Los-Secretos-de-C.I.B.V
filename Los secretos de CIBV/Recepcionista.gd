@@ -26,8 +26,8 @@ func _on_AreaEvent_body_entered(body):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-#	pass
-
+func unpause(timeline_name):
+	get_tree().paused = false
 
 func _dialog(dia):
 	var dialog = Dialogic.start(dia)

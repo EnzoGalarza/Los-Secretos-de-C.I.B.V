@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/agarrar objeto.ogg-7b0e8683fdfc43013cb6cc31802550ba.oggstr"
+
+[deps]
+
+source_file="res://assets/Sonido/agarrar objeto.ogg"
+dest_files=[ "res://.import/agarrar objeto.ogg-7b0e8683fdfc43013cb6cc31802550ba.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
