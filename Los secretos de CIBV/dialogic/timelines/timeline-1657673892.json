@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1657667740.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Pasá, no creo llegues muy lejos."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1657673892.json",
+		"name": "timeline-3"
+	}
+}

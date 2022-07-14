@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1657667740.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No te dejare pasar hasta que consigas todos los papeles"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1657667828.json",
+		"name": "timeline-1"
+	}
+}

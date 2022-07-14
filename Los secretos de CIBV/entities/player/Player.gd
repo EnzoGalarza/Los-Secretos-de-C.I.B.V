@@ -6,6 +6,8 @@ export (float) var SPEED_LIMIT:float = 400.0
 export (float) var FRICTION_WEIGHT:float = 25.1
 export (int) var gravity = 10
 
+
+
 onready var state_machine = $StateMachine
 
 onready var inventory : ItemList = $ItemList
@@ -16,10 +18,14 @@ var velocity : Vector2 = Vector2.ZERO
 var movement : Vector2 = Vector2.ZERO
 var papel = 0
 
+
 func _ready():
 	state_machine.set_parent(self)
 
 func _input(event):
+	if event.is_action_pressed("tecla_e"):
+		print("hola")
+	
 	if event.is_action_pressed("inventory"):
 		inventory.visible = !inventory.visible
 
@@ -66,3 +72,5 @@ func taked(item_name,item):
 		print ("agarraste 1 papel")
 	else:
 		print (str("agarraste ", papel," papeles"))
+
+

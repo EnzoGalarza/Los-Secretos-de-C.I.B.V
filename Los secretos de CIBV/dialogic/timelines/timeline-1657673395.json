@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1657673409.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Me encerraron, tendre que escapar por algun lado!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1657673395.json",
+		"name": "timeline-2"
+	}
+}
