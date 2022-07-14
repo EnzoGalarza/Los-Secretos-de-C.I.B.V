@@ -9,6 +9,7 @@ onready var detection_area = $DetectionArea
 onready var state_machine = $StateMachine
 onready var animation_enemy = $AnimationEnemy
 onready var enemy_sfx = $Sfx
+onready  var warning = $Warning
 
 var move : Vector2 = Vector2.ZERO
 var direction = 1
@@ -74,3 +75,5 @@ func fire_audio():
 func _stop_fire_audio():
 	enemy_sfx.stream = null
 	enemy_sfx.stop()	
+func warning():
+	warning.visible = !warning.visible

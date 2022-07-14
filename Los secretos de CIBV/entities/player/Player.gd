@@ -17,6 +17,7 @@ onready var animation_player : AnimationPlayer = $AnimationPlayer
 var velocity : Vector2 = Vector2.ZERO
 var movement : Vector2 = Vector2.ZERO
 var papel = 0
+var llave = 0
 
 
 func _ready():
@@ -73,4 +74,7 @@ func taked(item_name,item):
 	else:
 		print (str("agarraste ", papel," papeles"))
 
+func taked2(item_name,item):	
+	inventory.add_item(item_name,item.texture)	
+	llave += 1
 

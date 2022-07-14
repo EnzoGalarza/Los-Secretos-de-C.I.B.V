@@ -95,6 +95,11 @@ config/icon="res://icon.png"
 Controller="*res://Controller.gd"
 Checkpoint="*res://Checkpoint.gd"
 
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
